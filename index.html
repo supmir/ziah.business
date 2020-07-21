@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        #navbar {
+            overflow: hidden;
+            background-color: #777777;
+        }
+
+        .profile-photo {
+            border: 3px solid green;
+
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .center {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid blue;
+        }
+
+        /* Page content */
+        .content {
+            padding: 16px;
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky+.content {
+            padding-top: 60px;
+        }
+    </style>
+    <title>ziah.business</title>
+</head>
+
+<body>
+
+    <div>
+    </div>
+    <div id="navbar">
+
+        <div class="w3-row">
+            <div class="w3-col s8 m9 l9">
+                <div class="w3-row">
+                    <div class="w3-bar w3-black">
+                        <button class="w3-bar-item w3-button">
+                            <h1><a href="http://ziah.business">ziah.business</a></h1>
+                        </button>
+                    </div>
+                </div>
+                <div class="w3-row">
+                    <div class="w3-bar w3-black">
+                        <button class="w3-bar-item w3-button tablink  w3-red"
+                            onclick="openTab(event,'Maximma')">Maximma</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Plants')">Plants</button>
+                    </div>
+                </div>
+                <div class="w3-row">
+                    <div class="w3-bar w3-black">
+                        <button class="w3-bar-item w3-button">
+                            <h1></h1>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="w3-col s4 m2 l2 center" style="height:max-content">
+                <div>
+                    <div class="">
+                        <img class="profile-photo"
+                            src="https://c8.alamy.com/comp/RWGATB/smiling-emoticon-square-face-icon-avatar-symbol-character-pictogram-flat-vector-sign-isolated-on-white-background-simple-vector-illustration-for-g-RWGATB.jpg"
+                            alt="Avatar">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="w3-col s0 m1 l1">
+            </div>
+        </div>
+
+    </div>
+    <div class="content">
+        <div id="Maximma" class="w3-container cat">
+            <h1>Maximma</h1>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placedre</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will bere</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will bere</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will be placed here</p>
+            <p>Products will bere</p>
+            <p>Products will be placed here</p>
+
+        </div>
+
+        <div id="Plants" class="w3-container cat" style="display:none">
+            <h2>Plants</h2>
+            <p>Products will be placed here</p>
+        </div>
+    </div>
+
+
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        function openTab(evt, catName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("cat");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+            }
+            document.getElementById(catName).style.display = "block";
+            evt.currentTarget.className += " w3-red";
+        }
+    </script>
+</body>
+
+</html>
