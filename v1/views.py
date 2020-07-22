@@ -17,7 +17,7 @@ def products(request):
 
 def product(request, category, productname):
     product = get_object_or_404(Product, pk=str(productname))
-    content = Content.objects.filter(productname=str(productname))
+    content = Content.objects.filter(product_name=str(productname))
     context = {
         'category': category,
         'product': product,
