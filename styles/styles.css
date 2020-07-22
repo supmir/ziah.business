@@ -1,0 +1,130 @@
+
+        #navbar {
+            overflow: hidden;
+        }
+
+        .flex-container {
+            display: flex;
+        }
+
+        .product-img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        /* Page content */
+        .content {
+            padding: 16px;
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            object-fit: contain;
+        }
+
+        .black-border {
+            border-top: 5px solid maroon;
+            border-bottom: 5px solid maroon;
+        }
+
+        .black-border-circle {
+            border: 5px solid maroon;
+        }
+
+        .profile-container {
+            margin: 10px;
+            max-width: 200px;
+            max-height: 200px;
+            position: fixed;
+            top: 0;
+        }
+
+        @media only screen and (max-width: 355px) {
+            .profile-container {
+                width: 20%;
+                right: 0;
+            }
+
+            .flex-container>.w3-card-4 {
+                margin: 20px 0px;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 355px) {
+            .profile-container {
+                width: 30%;
+                right: 0;
+            }
+
+            .flex-container>.w3-card-4 {
+                margin: 20px 0px;
+                width: 100%;
+            }
+        }
+
+        @media only screen and (min-width: 390px) {
+            .profile-container {
+                width: 35%;
+                right: 0;
+            }
+
+            .flex-container>.w3-card-4 {
+                margin: 20px 0px;
+                width: 100%;
+            }
+        }
+        @media only screen and (min-width: 600px) {
+            .profile-container {
+                width: 35%;
+                right: 0;
+            }
+
+            .flex-container>.w3-card-4 {
+                margin: 20px 0px;
+                width: 45%;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .profile-container {
+                width: 30%;
+                right: 30px;
+            }
+
+            .flex-container>.w3-card-4 {
+                margin: 20px 10px;
+                width: 45%;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .profile-container {
+                width: 30%;
+                right: 75px;
+            }
+
+            .flex-container>.w3-card-4 {
+                margin: 20px 10px;
+                width: 30%;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .profile-container {
+                width: 30%;
+                right: 100px;
+            }
+
+            .flex-container>.w3-card-4 {
+                margin: 20px 10px;
+                width: 30%;
+            }
+        }

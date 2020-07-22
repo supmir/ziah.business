@@ -5,101 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        #navbar {
-            overflow: hidden;
-        }
-
-        .profile-photo {
-            border: 3px solid green;
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: fill;
-        }
-
-        .flex-container {
-            display: flex;
-        }
-
-        .flex-container>.w3-card-4 {
-            margin: 30px 10px;
-        }
-
-        /* Page content */
-        .content {
-            padding: 16px;
-        }
-
-        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
-
-
-
-        @media only screen and (max-width: 355px) {
-            .profile-container {
-                width: 80px;
-                height: 80px;
-                position: fixed;
-                top: 0;
-                right: 0;
-            }
-        }
-
-        @media only screen and (min-width: 355px) {
-            .profile-container {
-                width: 120px;
-                height: 120px;
-                position: fixed;
-                top: 0;
-                right: 0;
-            }
-        }
-
-        @media only screen and (min-width: 390px) {
-            .profile-container {
-                width: 150px;
-                height: 150px;
-                position: fixed;
-                top: 0;
-                right: 0;
-            }
-        }
-
-        @media only screen and (min-width: 768px) {
-            .profile-container {
-                width: 200px;
-                height: 200px;
-                position: fixed;
-                top: 0;
-                right: 30px;
-            }
-        }
-
-        @media only screen and (min-width: 992px) {
-            .profile-container {
-                width: 200px;
-                height: 200px;
-                position: fixed;
-                top: 0;
-                right: 50px;
-            }
-        }
-
-        @media only screen and (min-width: 1200px) {
-            .profile-container {
-                width: 200px;
-                height: 200px;
-                position: fixed;
-                top: 0;
-                right: 100px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css">
     <title>ziah.business</title>
 </head>
 
@@ -112,14 +18,14 @@
             <div class="flex-container" style="flex-direction:column; flex :10 0;">
                 <div id="mininav">
                     <div>
-                        <div class="w3-bar w3-black">
-                            <button class="w3-bar-item w3-button">
+                        <div class="w3-bar w3-white">
+                            <button class="w3-bar-item w3-button w3-white">
                                 <h1><a href="http://ziah.business">ziah.business</a></h1>
                             </button>
                         </div>
                     </div>
                     <div>
-                        <div class="w3-bar w3-black">
+                        <div class="w3-bar w3-black black-border">
                             <button class="w3-bar-item w3-button tablink  w3-red"
                                 onclick="openTab(event,'Maximma')">Maximma</button>
                             <button class="w3-bar-item w3-button tablink"
@@ -132,170 +38,78 @@
     </div>
 
 
-    <div class="profile-container">
-        <div style="margin: 10px;">
-            <img id="profile-pic" class="profile-photo"
-                src="https://c8.alamy.com/comp/RWGATB/smiling-emoticon-square-face-icon-avatar-symbol-character-pictogram-flat-vector-sign-isolated-on-white-background-simple-vector-illustration-for-g-RWGATB.jpg"
-                alt="Avatar">
-        </div>
-    </div>
+
+    <img id="profile-pic" class="profile-photo profile-container black-border-circle"
+        src="https://c8.alamy.com/comp/RWGATB/smiling-emoticon-square-face-icon-avatar-symbol-character-pictogram-flat-vector-sign-isolated-on-white-background-simple-vector-illustration-for-g-RWGATB.jpg"
+        alt="Avatar">
+
 
     <div id="content" class="content">
         <div id="Maximma" class="w3-container cat">
             <h1>Maximma</h1>
             <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
                 <div class="w3-card-4">
-                    <img src="">
+                    <img class="product-img"
+                        src="https://1.bp.blogspot.com/-eMUImEn8wt4/XQf_Ar-25lI/AAAAAAAAWdc/_wZ6cry6eAAwBPZAK0lWuOrqR4Zo1hVTgCPcBGAYYCw/s1600/Maxxima%2BNutririon%2BDahulu%2BCellmaxx%2BKini%2BCMX.jpg">
                     <div class="w3-container">
                         <h3>AFX</h3>
                         <p>Bagus untuk badan</p>
                     </div>
                 </div>
                 <div class="w3-card-4">
-                    <img src="">
+                    <img class="product-img"
+                        src="https://1.bp.blogspot.com/-eMUImEn8wt4/XQf_Ar-25lI/AAAAAAAAWdc/_wZ6cry6eAAwBPZAK0lWuOrqR4Zo1hVTgCPcBGAYYCw/s1600/Maxxima%2BNutririon%2BDahulu%2BCellmaxx%2BKini%2BCMX.jpg">
                     <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
+                        <h3>AFX</h3>
+                        <p>Bagus untuk badan</p>
                     </div>
                 </div>
                 <div class="w3-card-4">
-                    <img src="">
+                    <img class="product-img"
+                        src="https://1.bp.blogspot.com/-eMUImEn8wt4/XQf_Ar-25lI/AAAAAAAAWdc/_wZ6cry6eAAwBPZAK0lWuOrqR4Zo1hVTgCPcBGAYYCw/s1600/Maxxima%2BNutririon%2BDahulu%2BCellmaxx%2BKini%2BCMX.jpg">
                     <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
+                        <h3>AFX</h3>
+                        <p>Bagus untuk badan</p>
                     </div>
                 </div>
                 <div class="w3-card-4">
-                    <img src="">
+                    <img class="product-img"
+                        src="https://1.bp.blogspot.com/-eMUImEn8wt4/XQf_Ar-25lI/AAAAAAAAWdc/_wZ6cry6eAAwBPZAK0lWuOrqR4Zo1hVTgCPcBGAYYCw/s1600/Maxxima%2BNutririon%2BDahulu%2BCellmaxx%2BKini%2BCMX.jpg">
                     <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
+                        <h3>AFX</h3>
+                        <p>Bagus untuk badan</p>
                     </div>
                 </div>
                 <div class="w3-card-4">
-                    <img src="">
+                    <img class="product-img"
+                        src="https://1.bp.blogspot.com/-eMUImEn8wt4/XQf_Ar-25lI/AAAAAAAAWdc/_wZ6cry6eAAwBPZAK0lWuOrqR4Zo1hVTgCPcBGAYYCw/s1600/Maxxima%2BNutririon%2BDahulu%2BCellmaxx%2BKini%2BCMX.jpg">
                     <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
+                        <h3>AFX</h3>
+                        <p>Bagus untuk badan</p>
                     </div>
                 </div>
                 <div class="w3-card-4">
-                    <img src="">
+                    <img class="product-img"
+                        src="https://1.bp.blogspot.com/-eMUImEn8wt4/XQf_Ar-25lI/AAAAAAAAWdc/_wZ6cry6eAAwBPZAK0lWuOrqR4Zo1hVTgCPcBGAYYCw/s1600/Maxxima%2BNutririon%2BDahulu%2BCellmaxx%2BKini%2BCMX.jpg">
                     <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
+                        <h3>AFX</h3>
+                        <p>Bagus untuk badan</p>
                     </div>
                 </div>
                 <div class="w3-card-4">
-                    <img src="">
+                    <img class="product-img"
+                        src="https://1.bp.blogspot.com/-eMUImEn8wt4/XQf_Ar-25lI/AAAAAAAAWdc/_wZ6cry6eAAwBPZAK0lWuOrqR4Zo1hVTgCPcBGAYYCw/s1600/Maxxima%2BNutririon%2BDahulu%2BCellmaxx%2BKini%2BCMX.jpg">
                     <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
+                        <h3>AFX</h3>
+                        <p>Bagus untuk badan</p>
                     </div>
                 </div>
                 <div class="w3-card-4">
-                    <img src="">
+                    <img class="product-img"
+                        src="https://1.bp.blogspot.com/-eMUImEn8wt4/XQf_Ar-25lI/AAAAAAAAWdc/_wZ6cry6eAAwBPZAK0lWuOrqR4Zo1hVTgCPcBGAYYCw/s1600/Maxxima%2BNutririon%2BDahulu%2BCellmaxx%2BKini%2BCMX.jpg">
                     <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
-                    </div>
-                </div>
-                <div class="w3-card-4">
-                    <img src="">
-                    <div class="w3-container">
-                        <h3>BRX</h3>
-                        <p>Bagus untuk minda</p>
+                        <h3>AFX</h3>
+                        <p>Bagus untuk badan</p>
                     </div>
                 </div>
             </div>
