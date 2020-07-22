@@ -5,7 +5,6 @@ from .models import Content
 # Create your views here.
 
 
-
 def products(request):
     maxxima_products = Product.objects.filter(product_category=str("maxxima"))
     garden_products = Product.objects.filter(product_category=str("garden"))
@@ -16,14 +15,14 @@ def products(request):
     return render(request, 'v1/products.html', context)
 
 
-def maxxima(request, productname):
+def product(request, category, productname):
     product = get_object_or_404(Product, pk=str(productname))
-    category = getattr(product, "product_category")
-    content = Content.objects.filter(productname=str(productname))
-    context = {
-        'product': product,
-        'content': content,
-    }
+    # category = getattr(product, "product_category")
+    # content = Content.objects.filter(productname=str(productname))
+    # context = {
+    #     'product': product,
+    #     'content': content,
+    # }
     if category == "maxxima":
         return render(request, 'v1/product.html', context)
     elif category == "garden":
