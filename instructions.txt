@@ -1,0 +1,71 @@
+1. start an ubuntu server
+2. get updates
+3. install apache2
+4. setup .conf file in /etc/apache2/sites-available
+######
+<VirtualHost *:80>
+        # The ServerName directive sets the request scheme, hostname and port that
+        # the server uses to identify itself. This is used when creating
+        # redirection URLs. In the context of virtual hosts, the ServerName
+        # specifies what hostname must appear in the request's Host: header to
+        # match this virtual host. For the default virtual host (this file) this
+        # value is not decisive as it is used as a last resort host regardless.
+        # However, you must set it for any further virtual host explicitly.
+        #ServerName www.example.com
+
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/ziah.business
+
+        # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
+        # error, crit, alert, emerg.
+        # It is also possible to configure the loglevel for particular
+        # modules, e.g.
+        #LogLevel info ssl:warn
+
+        ServerName ziah.business
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        Alias /robots.txt /home/iskandar_amir/ziah.business/static/robots.txt
+        Alias /favicon.ico /home/iskandar_amir/ziah.business/static/favicon.ico
+        # Alias /media/ /home/iskandar_amir/ziah.business/media/
+        Alias /static/ /home/iskandar_amir/ziah.business/static/
+
+        <Directory /home/iskandar_amir/ziah.business/static>
+                Require all granted
+        </Directory>
+
+        WSGIScriptAlias / /home/iskandar_amir/ziah.business/ziahbusiness/wsgi.py
+        WSGIDaemonProcess ziah.business python-home=/home/iskandar_amir/ziah.business/ziahbusinessenv python-path=/home/iskandar_amir/ziah.business
+        WSGIProcessGroup ziah.business
+        <Directory /home/iskandar_amir/ziah.business/ziahbusiness>
+                <Files wsgi.py>
+                        Require all granted
+                </Files>
+        </Directory>
+</VirtualHost>
+######
+5. install apache2-dev
+6. install python 3.8
+ok ignore these sevens and go to the next 7
+7. get tar.gz file for mod_wsgi (currently: https://github.com/GrahamDumpleton/mod_wsgi/archive/4.7.1.tar.gz)
+#####
+curl -O https://github.com/GrahamDumpleton/mod_wsgi/archive/4.7.1.tar.gz
+#####
+7.1 ok honestly 7 might not work so just download then upload it manually
+8. unpack tar
+#####
+tar xvfz mod_wsgi-4.7.1.tar.gz
+#####
+9. get into the folder and run
+#####
+./configure --with-apxs=/usr/local/apache/bin/apxs \
+  --with-python=/usr/bin/python3.8
+#####
+
+7. run these commands
+#####
+sudo apt-get install libexpat1 
+sudo apt-get install apache2-utils ssl-cert libapache2-mod-wsgi
+#####
+***note: technically running "sudo apt-get install libapache2-mod-wsgi" should be enough but yknow idk man
