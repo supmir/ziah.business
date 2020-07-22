@@ -8,24 +8,22 @@
     <style>
         #navbar {
             overflow: hidden;
-            background-color: #777777;
         }
 
         .profile-photo {
             border: 3px solid green;
-
             border-radius: 50%;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: fill;
         }
 
-        .center {
+        .flex-container {
             display: flex;
-            height: 100%;
-            justify-content: center;
-            align-items: center;
-            border: 3px solid blue;
+        }
+
+        .flex-container>.w3-card-4 {
+            margin: 30px 10px;
         }
 
         /* Page content */
@@ -40,9 +38,66 @@
             width: 100%;
         }
 
-        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-        .sticky+.content {
-            padding-top: 60px;
+
+
+        @media only screen and (max-width: 355px) {
+            .profile-container {
+                width: 80px;
+                height: 80px;
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 355px) {
+            .profile-container {
+                width: 120px;
+                height: 120px;
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 390px) {
+            .profile-container {
+                width: 150px;
+                height: 150px;
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .profile-container {
+                width: 200px;
+                height: 200px;
+                position: fixed;
+                top: 0;
+                right: 30px;
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .profile-container {
+                width: 200px;
+                height: 200px;
+                position: fixed;
+                top: 0;
+                right: 50px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .profile-container {
+                width: 200px;
+                height: 200px;
+                position: fixed;
+                top: 0;
+                right: 100px;
+            }
         }
     </style>
     <title>ziah.business</title>
@@ -53,79 +108,197 @@
     <div style="height: 1px;">
     </div>
     <div id="navbar">
-
-        <div class="w3-row">
-            <div class="w3-col s8 m9 l9">
-                <div class="w3-row">
-                    <div class="w3-bar w3-black">
-                        <button class="w3-bar-item w3-button">
-                            <h1><a href="http://ziah.business">ziah.business</a></h1>
-                        </button>
+        <div class="flex-container">
+            <div class="flex-container" style="flex-direction:column; flex :10 0;">
+                <div id="mininav">
+                    <div>
+                        <div class="w3-bar w3-black">
+                            <button class="w3-bar-item w3-button">
+                                <h1><a href="http://ziah.business">ziah.business</a></h1>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="w3-bar w3-black">
+                            <button class="w3-bar-item w3-button tablink  w3-red"
+                                onclick="openTab(event,'Maximma')">Maximma</button>
+                            <button class="w3-bar-item w3-button tablink"
+                                onclick="openTab(event,'Plants')">Plants</button>
+                        </div>
                     </div>
                 </div>
-                <div class="w3-row">
-                    <div class="w3-bar w3-black">
-                        <button class="w3-bar-item w3-button tablink  w3-red"
-                            onclick="openTab(event,'Maximma')">Maximma</button>
-                        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Plants')">Plants</button>
-                    </div>
-                </div>
-                <div class="w3-row">
-                    <div class="w3-bar w3-black">
-                        <button class="w3-bar-item w3-button">
-                            <h1></h1>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="w3-col s4 m2 l2 center" style="height:max-content">
-                <div>
-                    <div class="">
-                        <img class="profile-photo"
-                            src="https://c8.alamy.com/comp/RWGATB/smiling-emoticon-square-face-icon-avatar-symbol-character-pictogram-flat-vector-sign-isolated-on-white-background-simple-vector-illustration-for-g-RWGATB.jpg"
-                            alt="Avatar">
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="w3-col s0 m1 l1">
             </div>
         </div>
-
     </div>
-    <div class="content">
+
+
+    <div class="profile-container">
+        <div style="margin: 10px;">
+            <img id="profile-pic" class="profile-photo"
+                src="https://c8.alamy.com/comp/RWGATB/smiling-emoticon-square-face-icon-avatar-symbol-character-pictogram-flat-vector-sign-isolated-on-white-background-simple-vector-illustration-for-g-RWGATB.jpg"
+                alt="Avatar">
+        </div>
+    </div>
+
+    <div id="content" class="content">
         <div id="Maximma" class="w3-container cat">
             <h1>Maximma</h1>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placedre</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will bere</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will bere</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will be placed here</p>
-            <p>Products will bere</p>
-            <p>Products will be placed here</p>
+            <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>AFX</h3>
+                        <p>Bagus untuk badan</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+                <div class="w3-card-4">
+                    <img src="">
+                    <div class="w3-container">
+                        <h3>BRX</h3>
+                        <p>Bagus untuk minda</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
@@ -138,14 +311,21 @@
 
     <script>
         window.onscroll = function () { myFunction() };
+        window.onload = function () { myFunction() };
 
         var navbar = document.getElementById("navbar");
+        var mininav = document.getElementById("mininav");
+        var profile = document.getElementById("profile-pic");
+        var content = document.getElementById("content");
         var sticky = navbar.offsetTop;
 
         function myFunction() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
+                content.setAttribute("style", "margin-top:" + mininav.clientHeight + "px;")
             } else {
+                content.setAttribute("style", "margin-top:-" + (navbar.clientHeight - mininav.clientHeight) + "px;")
+
                 navbar.classList.remove("sticky");
             }
         }
