@@ -66,9 +66,9 @@ tar xvfz mod_wsgi-4.7.1.tar.gz
 7. run these commands
 #####
 sudo apt-get install libexpat1 
-sudo apt-get install apache2-utils ssl-cert libapache2-mod-wsgi
+sudo apt-get install apache2-utils ssl-cert libapache2-mod-wsgi-py3
 #####
-***note: technically running "sudo apt-get install libapache2-mod-wsgi" should be enough but yknow idk man
+***note: technically running "sudo apt-get install libapache2-mod-wsgi-py3" should be enough but yknow idk man
 8. sudo apt-get install git
 9. git pull into directory, in this case /home/iskandar_amir/ziah.business/ 
 #####
