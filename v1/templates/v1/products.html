@@ -1,0 +1,61 @@
+{% extends "v1/base.html" %}
+
+{% block style %}
+{% endblock %}
+
+{% block navbar %}
+<div style="height: 1px;">
+</div>
+<div id="navbar">
+    <div class="flex-container">
+        <div class="flex-container" style="flex-direction:column; flex :10 0;">
+            <div id="mininav">
+                <div>
+                    <div class="w3-bar w3-white">
+                        <button class="w3-bar-item w3-button w3-white">
+                            <h1><a href="http://ziah.business">ziah.business</a></h1>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="w3-bar w3-black black-border">
+                        <button class="w3-bar-item w3-button tablink  w3-red"
+                            onclick="openTab(event,'Maximma')">Maximma</button>
+                        <button class="w3-bar-item w3-button tablink" onclick="openTab(event,'Plants')">Plants</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="https://wa.me/60138603366"><img id="profile-pic" class="profile-photo profile-container black-border-circle"
+        src="https://i.imgur.com/hc6R7xP.jpg" alt="Avatar"></a>
+{% endblock %}
+
+{% block msection %}
+<div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
+    {% for maxxima_product in maxxima_products%}
+    <div class="w3-card-4">
+        <img class="product-img" src="{{maxxima_product.img}}">
+        <div class="w3-container">
+            <h3>{{maxxima_product.product_name}}</h3>
+            <p>{{maxxima_product.description}}/p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block psection %}
+<div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
+    {% for garden_product in garden_products%}
+    <div class="w3-card-4">
+        <img class="product-img" src="{{garden_product.img}}">
+        <div class="w3-container">
+            <h3>{{garden_product.product_name}}</h3>
+            <p>{{garden_product.description}}/p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
