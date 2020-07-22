@@ -36,7 +36,7 @@
 <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
     {% for maxxima_product in maxxima_products%}
     <div class="w3-card-4">
-        <img class="product-img" src="{{maxxima_product.img}}">
+        <a href="maxxima/{{maxxima_product.product_name}}"><img class="product-img" src="{{maxxima_product.img}}"></a>
         <div class="w3-container">
             <h3>{{maxxima_product.product_name}}</h3>
             <p>{{maxxima_product.description}}</p>
@@ -50,7 +50,7 @@
 <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
     {% for garden_product in garden_products%}
     <div class="w3-card-4">
-        <img class="product-img" src="{{garden_product.img}}">
+        <a href="garden/{{garden_product.product_name}}"><img class="product-img" src="{{garden_product.img}}"></a>
         <div class="w3-container">
             <h3>{{garden_product.product_name}}</h3>
             <p>{{garden_product.description}}</p>
