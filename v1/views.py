@@ -19,10 +19,10 @@ def product(request, category, productname):
     product = get_object_or_404(Product, pk=str(productname))
     # category = getattr(product, "product_category")
     # content = Content.objects.filter(productname=str(productname))
-    # context = {
+    context = {
     #     'product': product,
     #     'content': content,
-    # }
+    }
     if category == "maxxima":
         return render(request, 'v1/product.html', context)
     elif category == "garden":
