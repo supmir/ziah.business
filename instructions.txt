@@ -93,3 +93,4 @@ chmod 664 db.sqlite3
 sudo chown :www-data ~/ziah.business/db.sqlite3
 sudo chown :www-data ~/ziah.business
 ./manage.py collectstatic
+sudo /etc/init.d/apache2 restart
