@@ -83,10 +83,13 @@ virtualenv ziahbusinessenv
 source ziahbusinessenv/bin/activate
 pip3 install django
 
-11. 
+11. add this to settings.py
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+12. 
 python3.8 manage.py makemigrations
 python3.8 manage.py migrate
 python3.8 manage.py createsuperuser
 chmod 664 db.sqlite3
 sudo chown :www-data ~/ziah.business/db.sqlite3
 sudo chown :www-data ~/ziah.business
+./manage.py collectstatic

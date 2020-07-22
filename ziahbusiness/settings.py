@@ -31,13 +31,13 @@ ALLOWED_HOSTS = ["34.125.195.39","ziah.business"]
 # Application definition
 
 INSTALLED_APPS = [
-    'v1.apps.V1Config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'v1.apps.V1Config',
 ]
 
 MIDDLEWARE = [
