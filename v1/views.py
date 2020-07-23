@@ -9,7 +9,7 @@ from .models import Category
 def products(request):
     maxxima_products = Product.objects.filter(category=str("Maxxima"))
     garden_products = Product.objects.filter(category=str("Garden"))
-    categories = Category.objects
+    categories = Category.objects.all()
     context = {
         'categories':categories,
         'maxxima_products': maxxima_products,
