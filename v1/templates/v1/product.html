@@ -47,7 +47,7 @@
     <div id="{{ cat }}" class="w3-container cat">
         <h1>{{ cat }}</h1>
         <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
-            {% if category == cat %}
+            {% if product.category == cat %}
             <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
                 <div class="w3-card-4">
                     <a href="{{category}}/{{product.product_name}}"><img class="product-img" src="{{product.img}}"></a>
