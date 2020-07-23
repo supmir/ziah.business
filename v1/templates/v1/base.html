@@ -69,7 +69,7 @@
             var path = window.location.pathname
             var patt = new RegExp("[^\/]+");
             var res = patt.exec(path);
-            path = res[0].substring(1, res[0].length)
+            path = res[0]
             openTab(path)
         }
         function myFunction() {
