@@ -7,7 +7,7 @@
 {% block content %}
 <div id="content" class="content">
     {% for cat in categories %}
-    {% if product.category == cat %}
+    {% if category == cat %}
     <div id="{{ cat }}" class="w3-container cat">
     {% else %}
     <div id="{{ cat }}" class="w3-container cat" style="display: none;">
