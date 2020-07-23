@@ -6,8 +6,8 @@ from .models import Content
 
 
 def products(request):
-    maxxima_products = Product.objects.filter(product_category=str("maxxima"))
-    garden_products = Product.objects.filter(product_category=str("garden"))
+    maxxima_products = Product.objects.filter(category=str("maxxima"))
+    garden_products = Product.objects.filter(category=str("garden"))
     context = {
         'maxxima_products': maxxima_products,
         'garden_products': garden_products
