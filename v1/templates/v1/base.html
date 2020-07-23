@@ -31,10 +31,10 @@
                             {% for cat in categories %}
                             {% if cat == category %}
                             <button class="w3-bar-item w3-button tablink w3-red"
-                                onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
+                                onclick="openTab('{{ cat }}')">{{ cat }}</button>
                             {% else %}
                             <button class="w3-bar-item w3-button tablink"
-                                onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
+                                onclick="openTab('{{ cat }}')">{{ cat }}</button>
                             {% endif %}
                             {% endfor %}
                         </div>
