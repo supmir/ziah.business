@@ -64,9 +64,12 @@
         var content = document.getElementById("content");
         var sticky = navbar.offsetTop;
 
-        function load(){
+        function load() {
             myFunction()
             var path = window.location.pathname
+            var patt = new RegExp("\/.+?\/");
+            var res = patt.exec(path);
+            path = res[0].substring(1, res[0].length - 1)
             openTab(path)
         }
         function myFunction() {
@@ -88,7 +91,7 @@
             tablinks = document.getElementsByClassName("tablink");
             for (i = 0; i < x.length; i++) {
                 tablinks[i].classList.remove("w3-red");
-                if (tablinks[i].textContent == catName){
+                if (tablinks[i].textContent == catName) {
                     tablinks[i].classList.add("w3-red");
                 }
             }
