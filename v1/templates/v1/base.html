@@ -29,7 +29,7 @@
                     <div>
                         <div class="w3-bar w3-black black-border">
                             {% for cat in categories %}
-                            <button class="w3-bar-item w3-button tablink  {{ cat==category:"w3-red,"}}"
+                            <button class="w3-bar-item w3-button tablink  {{ (cat==category):"w3-red,"}}"
                                 onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
                             {% endblock %}
                         </div>
