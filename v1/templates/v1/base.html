@@ -31,10 +31,10 @@
                             {% for cat in categories %}
                             {% if cat == category %}
                             <button class="w3-bar-item w3-button tablink w3-red"
-                            onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
+                                onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
                             {% else %}
                             <button class="w3-bar-item w3-button tablink"
-                            onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
+                                onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
                             {% endif %}
                             {% endfor %}
                         </div>
@@ -49,14 +49,14 @@
     {% endblock %}
 
     {% block content %}
-    
+
     {% endblock %}
 
 
 
     <script>
         window.onscroll = function () { myFunction() };
-        window.onload = function () { myFunction() };
+        window.onload = function () { load() };
 
         var navbar = document.getElementById("navbar");
         var mininav = document.getElementById("mininav");
@@ -64,6 +64,10 @@
         var content = document.getElementById("content");
         var sticky = navbar.offsetTop;
 
+        function load(){
+            myFunction()
+            openTab(path)
+        }
         function myFunction() {
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
@@ -73,8 +77,9 @@
 
                 navbar.classList.remove("sticky");
             }
+            var path = window.location.pathname
         }
-        function openTab(evt, catName) {
+        function openTab(catName) {
             var i, x, tablinks;
             x = document.getElementsByClassName("cat");
             for (i = 0; i < x.length; i++) {
@@ -82,10 +87,12 @@
             }
             tablinks = document.getElementsByClassName("tablink");
             for (i = 0; i < x.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+                tablinks[i].classList.remove("w3-red");
+                if (tablinks[i].textContent == catName){
+                    tablinks[i].classList.add("w3-red");
+                }
             }
             document.getElementById(catName).style.display = "block";
-            evt.currentTarget.className += " w3-red";
         }
     </script>
 </body>
