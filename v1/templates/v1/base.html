@@ -29,9 +29,13 @@
                     <div>
                         <div class="w3-bar w3-black black-border">
                             {% for cat in categories %}
-                            {% with active=(cat==category) %}
-                            <button class="w3-bar-item w3-button tablink  {{ active|yesno:"w3-red,"}}"
-                                onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
+                            {% if cat==category %}
+                            <button class="w3-bar-item w3-button tablink w3-red"
+                            onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
+                            {% else %}
+                            <button class="w3-bar-item w3-button tablink"
+                            onclick="openTab(event,'{{ cat }}')">{{ cat }}</button>
+                            {% endif %}
                             {% endwith %}
                             {% endblock %}
                         </div>
