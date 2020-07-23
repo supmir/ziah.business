@@ -9,16 +9,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     product_name = models.CharField(max_length=200, primary_key=True)
-    # category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
-    maxxima = "maxxima"
-    garden = "garden"
-    product_categories = [
-        (maxxima, "maxxima"),
-        (garden, "garden"),
-    ]
-    product_category = models.CharField(
-        max_length=200, choices=product_categories)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
     img = models.TextField()
     description = models.TextField()
 
