@@ -3,27 +3,63 @@
 {% block style %}
 {% endblock %}
 
-
-{% block msection %}
-<div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
-    <div class="w3-card-4">
-        <a href="maxxima/{{product.product_name}}"><img class="product-img" src="{{product.img}}"></a>
-        <div class="w3-container">
-            <h3>{{product.product_name}}</h3>
-            <p>{{product.description}}</p>
+{% block navbar %}
+<div style="height: 1px;">
+</div>
+<div id="navbar">
+    <div class="flex-container">
+        <div class="flex-container" style="flex-direction:column; flex :10 0;">
+            <div id="mininav">
+                <div>
+                    <div class="w3-bar w3-white">
+                        <button class="w3-bar-item w3-button w3-white">
+                            <h1><a href="http://ziah.business">ziah.business</a></h1>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="w3-bar w3-black black-border">
+                        {% for cat in categories %}
+                        {% if cat == category %}
+                        <button class="w3-bar-item w3-button tablink w3-red">
+                            <a href="http://ziah.business/{{ cat }}">{{ cat }}</a>
+                        </button>
+                        {% else %}
+                        <button class="w3-bar-item w3-button tablink">
+                            <a href="http://ziah.business/{{ cat }}">{{ cat }}</a>
+                        </button>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+<a href="https://wa.me/60138603366"><img id="profile-pic"
+        class="profile-photo profile-container black-border-circle" src="https://i.imgur.com/hc6R7xP.jpg"
+        alt="Avatar"></a>
 {% endblock %}
 
-{% block psection %}
-<div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
-    <div class="w3-card-4">
-        <a href="garden/{{product.product_name}}"><img class="product-img" src="{{product.img}}"></a>
-        <div class="w3-container">
-            <h3>{{product.product_name}}</h3>
-            <p>{{product.description}}</p>
+{% block content %}
+<div id="content" class="content">
+    {% for cat in categories %}
+    <div id="{{ cat }}" class="w3-container cat">
+        <h1>{{ cat }}</h1>
+        <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
+            {% if category == cat %}
+            <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
+                <div class="w3-card-4">
+                    <a href="{{category}}/{{product.product_name}}"><img class="product-img" src="{{product.img}}"></a>
+                    <div class="w3-container">
+                        <h3>{{product.product_name}}</h3>
+                        <p>{{product.description}}</p>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
         </div>
     </div>
+    {% endfor %}
 </div>
 {% endblock %}

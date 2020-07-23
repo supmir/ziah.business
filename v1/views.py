@@ -6,16 +6,15 @@ from .models import Category
 # Create your views here.
 
 
-def products(request):
+def products(request, category="Maxxima"):
     maxxima_products = Product.objects.filter(category=str("Maxxima"))
     garden_products = Product.objects.filter(category=str("Garden"))
     products = Product.objects.all()
     categories = Category.objects.all()
     context = {
         'categories': categories,
+        'category': category,
         'products': products,
-        'maxxima_products': maxxima_products,
-        'garden_products': garden_products
     }
     return render(request, 'v1/products.html', context)
 
