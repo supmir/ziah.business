@@ -67,9 +67,9 @@
         function load() {
             myFunction()
             var path = window.location.pathname
-            var patt = new RegExp("\/.+?\/");
+            var patt = new RegExp("[^\/]+");
             var res = patt.exec(path);
-            path = res[0].substring(1, res[0].length - 1)
+            path = res[0].substring(1, res[0].length)
             openTab(path)
         }
         function myFunction() {
