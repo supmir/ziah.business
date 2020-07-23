@@ -66,6 +66,7 @@
 
         function load(){
             myFunction()
+            var path = window.location.pathname
             openTab(path)
         }
         function myFunction() {
@@ -77,7 +78,6 @@
 
                 navbar.classList.remove("sticky");
             }
-            var path = window.location.pathname
         }
         function openTab(catName) {
             var i, x, tablinks;
