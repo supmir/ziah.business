@@ -9,9 +9,11 @@ from .models import Category
 def products(request):
     maxxima_products = Product.objects.filter(category=str("Maxxima"))
     garden_products = Product.objects.filter(category=str("Garden"))
+    products = Product.objects.all()
     categories = Category.objects.all()
     context = {
-        'categories':categories,
+        'categories': categories,
+        'products': products,
         'maxxima_products': maxxima_products,
         'garden_products': garden_products
     }
@@ -23,7 +25,7 @@ def product(request, category, productname):
     content = Content.objects.filter(product=str(productname))
     categories = Category.objects.all()
     context = {
-        'categories':categories,
+        'categories': categories,
         'category': category,
         'product': product,
         'content': content,

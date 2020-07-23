@@ -3,29 +3,23 @@
 {% block style %}
 {% endblock %}
 
-
-{% block Maxxima %}
-<div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
-    {% for maxxima_product in maxxima_products%}
-    <div class="w3-card-4">
-        <a href="Maxxima/{{maxxima_product.product_name}}"><img class="product-img" src="{{maxxima_product.img}}"></a>
-        <div class="w3-container">
-            <h3>{{maxxima_product.product_name}}</h3>
-            <p>{{maxxima_product.description}}</p>
-        </div>
-    </div>
-    {% endfor %}
-</div>
-{% endblock %}
-
-{% block Garden %}
-<div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
-    {% for garden_product in garden_products%}
-    <div class="w3-card-4">
-        <a href="Garden/{{garden_product.product_name}}"><img class="product-img" src="{{garden_product.img}}"></a>
-        <div class="w3-container">
-            <h3>{{garden_product.product_name}}</h3>
-            <p>{{garden_product.description}}</p>
+{% block content %}
+<div id="content" class="content">
+    {% for cat in categories %}
+    <div id="{{ cat }}" class="w3-container cat">
+        <h1>{{ cat }}</h1>
+        <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
+            {% for product in products %}
+            {% if product.category == cat %}
+            <div class="w3-card-4">
+                <a href="{{cat}}/{{product.product_name}}"><img class="product-img" src="{{product.img}}"></a>
+                <div class="w3-container">
+                    <h3>{{product.product_name}}</h3>
+                    <p>{{product.description}}</p>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
     {% endfor %}

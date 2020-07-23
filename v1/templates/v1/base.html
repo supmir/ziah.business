@@ -49,15 +49,7 @@
     {% endblock %}
 
     {% block content %}
-    <div id="content" class="content">
-        {% for cat in categories %}
-        <div id="{{ cat }}" class="w3-container cat">
-            <h1>{{ cat }}</h1>
-            {% block cat %}
-            {% endblock %}
-        </div>
-        {% endfor %}
-    </div>
+    
     {% endblock %}
 
 
