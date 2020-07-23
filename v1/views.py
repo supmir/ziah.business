@@ -2,13 +2,16 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Product
 from .models import Content
+from .models import Category
 # Create your views here.
 
 
 def products(request):
     maxxima_products = Product.objects.filter(category=str("Maxxima"))
     garden_products = Product.objects.filter(category=str("Garden"))
+    categories = Category.objects
     context = {
+        'categories':categories,
         'maxxima_products': maxxima_products,
         'garden_products': garden_products
     }
@@ -18,7 +21,9 @@ def products(request):
 def product(request, category, productname):
     product = get_object_or_404(Product, pk=str(productname))
     content = Content.objects.filter(product=str(productname))
+    categories = Category.objects
     context = {
+        'categories':categories,
         'category': category,
         'product': product,
         'content': content,
