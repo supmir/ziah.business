@@ -8,7 +8,6 @@
 <div id="content" class="content">
     {% for cat in categories %}
     <div id="{{ cat }}" class="w3-container cat" style="display: none;">
-    {% endif %}
         <h1>{{ cat }}</h1>
         <div class="flex-container" style="justify-content: space-around; flex-wrap: wrap;">
             {% for product in products %}
