@@ -23,9 +23,9 @@ def product(request, category, productname):
         'product': product,
         'content': content,
     }
-    if category == "maxxima":
+    if category == "Maxxima":
         return render(request, 'v1/product.html', context)
-    elif category == "garden":
+    elif category == "Garden":
         return render(request, 'v1/product.html', context)
     else:
         return HttpResponseNotFound()
