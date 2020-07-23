@@ -21,7 +21,7 @@ def products(request):
 def product(request, category, productname):
     product = get_object_or_404(Product, pk=str(productname))
     content = Content.objects.filter(product=str(productname))
-    categories = Category.objects
+    categories = Category.objects.all()
     context = {
         'categories':categories,
         'category': category,
