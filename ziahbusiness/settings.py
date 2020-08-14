@@ -25,7 +25,7 @@ SECRET_KEY = 'r_(sz+zq%*x0g0dxwotz_ed0-4p!_(6+8niexk0enczan6l4rm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["34.125.195.39","ziah.business"]
+ALLOWED_HOSTS = ["localhost","34.125.195.39","ziah.business"]
 
 
 # Application definition
