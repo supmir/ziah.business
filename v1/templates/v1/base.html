@@ -15,37 +15,25 @@
     {% block navbar %}
     <div style="height: 1px;">
     </div>
-    <div id="navbar">
-        <div class="flex-container">
-            <div class="flex-container" style="flex-direction:column; flex :10 0;">
-                <div id="mininav">
-                    <div>
-                        <div class="w3-bar w3-white">
-                            <button class="w3-bar-item w3-button w3-white">
-                                <h1><a href="http://ziah.business">ziah.business</a></h1>
-                            </button>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="w3-bar w3-black black-border">
-                            {% for cat in categories %}
-                            {% if cat == category %}
-                            <button class="w3-bar-item w3-button tablink w3-red"
-                                onclick="openTab('{{ cat }}')">{{ cat }}</button>
-                            {% else %}
-                            <button class="w3-bar-item w3-button tablink"
-                                onclick="openTab('{{ cat }}')">{{ cat }}</button>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="w3-sidebar w3-bar-block">
+        <div class="w3-bar w3-black">
+            <button class="w3-bar-item w3-button w3-gray">
+                <h1><a href="http://ziah.business">ziah.business</a></h1>
+            </button>
         </div>
+        <a class="w3-bar" href="https://wa.me/60138603366"><img id="profile-pic"
+                class="profile-photo profile-container black-border-circle" src="https://i.imgur.com/hc6R7xP.jpg"
+                alt="Avatar"></a>
+        {% for cat in categories %}
+            {% if cat == category %}
+                <button class="w3-bar-item w3-button tablink w3-red"
+                    onclick="openTab('{{ cat }}')">{{ cat }}</button>
+            {% else %}
+                <button class="w3-bar-item w3-button tablink w3-gray"
+                    onclick="openTab('{{ cat }}')">{{ cat }}</button>
+            {% endif %}
+        {% endfor %}
     </div>
-    <a href="https://wa.me/60138603366"><img id="profile-pic"
-            class="profile-photo profile-container black-border-circle" src="https://i.imgur.com/hc6R7xP.jpg"
-            alt="Avatar"></a>
     {% endblock %}
 
     {% block content %}
