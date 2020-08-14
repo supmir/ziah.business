@@ -7,23 +7,12 @@
             display: flex;
             flex-direction: column;
         }
-
+        
         .product-img {
             width: 100%;
             object-fit: contain;
         }
 
-        /* Page content */
-        .content {
-            padding: 16px;
-        }
-
-        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-        .sticky {
-            position: fixed;
-            top: 0;
-            width: 100%;
-        }
 
         .profile-photo {
             border-radius: 50%;
@@ -48,6 +37,13 @@
         }
 
         @media only screen and (max-width: 355px) {
+            .w3-sidebar{
+            width: 25%;
+            }
+            .content {
+                padding: 16px;
+                width: 70%;
+            }
             .profile-container {
                 width: 20%;
                 right: 0;
@@ -60,6 +56,13 @@
         }
 
         @media only screen and (min-width: 355px) {
+            .w3-sidebar{
+            width: 25%;
+            }
+            .content {
+                padding: 16px;
+                width: 70%;
+            }
             .profile-container {
                 width: 30%;
                 right: 0;
@@ -72,6 +75,13 @@
         }
 
         @media only screen and (min-width: 390px) {
+            .w3-sidebar{
+            width: 25%;
+            }
+            .content {
+                padding: 16px;
+                width: 70%;
+            }
             .profile-container {
                 width: 35%;
                 right: 0;
@@ -83,6 +93,13 @@
             }
         }
         @media only screen and (min-width: 600px) {
+            .w3-sidebar{
+            width: 25%;
+            }
+            .content {
+                padding: 16px;
+                width: 70%;
+            }
             .profile-container {
                 width: 35%;
                 right: 0;
@@ -95,6 +112,13 @@
         }
 
         @media only screen and (min-width: 768px) {
+            .w3-sidebar{
+            width: 25%;
+            }
+            .content {
+                padding: 16px;
+                width: 70%;
+            }
             .profile-container {
                 width: 30%;
                 right: 30px;
@@ -107,6 +131,13 @@
         }
 
         @media only screen and (min-width: 992px) {
+            .w3-sidebar{
+            width: 25%;
+            }
+            .content {
+                padding: 16px;
+                width: 70%;
+            }
             .profile-container {
                 width: 30%;
                 right: 75px;
@@ -119,6 +150,13 @@
         }
 
         @media only screen and (min-width: 1200px) {
+            .w3-sidebar{
+            width: 25%;
+            }
+            .content {
+                padding: 16px;
+                width: 70%;
+            }
             .profile-container {
                 width: 30%;
                 right: 100px;
