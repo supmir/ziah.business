@@ -1,5 +1,4 @@
 *.sqlite3
 v1/__pycache__/*
-db.sqlite3
 ziahbusiness/__pycache__/*
 v1/migrations/*
