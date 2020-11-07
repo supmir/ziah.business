@@ -4,6 +4,7 @@
 
 .flex-container {
     display: flex;
+    flex-direction: column;
 }
 
 .product-img {
@@ -11,21 +12,13 @@
     object-fit: contain;
 }
 
-/* Page content */
-.content {
-    padding: 16px;
-}
-
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
 
 .profile-photo {
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
     object-fit: contain;
+
 }
 
 .black-border {
@@ -37,19 +30,18 @@
     border: 5px solid maroon;
 }
 
-.profile-container {
-    margin: 10px;
-    max-width: 200px;
-    max-height: 200px;
-    position: fixed;
-    top: 0;
-}
+
 
 @media only screen and (max-width: 355px) {
-    .profile-container {
-        width: 20%;
-        right: 0;
+    .w3-sidebar {
+        width: 25%;
     }
+
+    .content {
+        padding: 16px;
+        margin-left: 25%;
+    }
+
 
     .flex-container>.w3-card-4 {
         margin: 20px 0px;
@@ -58,9 +50,13 @@
 }
 
 @media only screen and (min-width: 355px) {
-    .profile-container {
-        width: 30%;
-        right: 0;
+    .w3-sidebar {
+        width: 25%;
+    }
+
+    .content {
+        padding: 16px;
+        margin-left: 25%;
     }
 
     .flex-container>.w3-card-4 {
@@ -70,9 +66,13 @@
 }
 
 @media only screen and (min-width: 390px) {
-    .profile-container {
-        width: 35%;
-        right: 0;
+    .w3-sidebar {
+        width: 25%;
+    }
+
+    .content {
+        padding: 16px;
+        margin-left: 25%;
     }
 
     .flex-container>.w3-card-4 {
@@ -82,9 +82,13 @@
 }
 
 @media only screen and (min-width: 600px) {
-    .profile-container {
-        width: 35%;
-        right: 0;
+    .w3-sidebar {
+        width: 25%;
+    }
+
+    .content {
+        padding: 16px;
+        margin-left: 25%;
     }
 
     .flex-container>.w3-card-4 {
@@ -94,9 +98,13 @@
 }
 
 @media only screen and (min-width: 768px) {
-    .profile-container {
-        width: 30%;
-        right: 30px;
+    .w3-sidebar {
+        width: 25%;
+    }
+
+    .content {
+        padding: 16px;
+        margin-left: 25%;
     }
 
     .flex-container>.w3-card-4 {
@@ -106,25 +114,33 @@
 }
 
 @media only screen and (min-width: 992px) {
-    .profile-container {
-        width: 30%;
-        right: 75px;
+    .w3-sidebar {
+        width: 25%;
+    }
+
+    .content {
+        padding: 16px;
+        margin-left: 25%;
     }
 
     .flex-container>.w3-card-4 {
         margin: 20px 10px;
-        width: 30%;
+        width: 45%;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    .profile-container {
-        width: 30%;
-        right: 100px;
+    .w3-sidebar {
+        width: 25%;
+    }
+
+    .content {
+        padding: 16px;
+        margin-left: 25%;
     }
 
     .flex-container>.w3-card-4 {
         margin: 20px 10px;
-        width: 30%;
+        width: 20%;
     }
 }
