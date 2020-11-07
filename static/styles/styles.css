@@ -16,6 +16,10 @@
     padding: 16px;
 }
 
+.fbcontainer {
+    text-align: center;
+}
+
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
